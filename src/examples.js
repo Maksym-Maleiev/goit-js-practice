@@ -166,7 +166,7 @@ console.log(x && y > 0 ? 'hurray' : 'foo');
 
 const incomingValue = 5;
 const defaultValue = 10;
-const resultValue = incomingValue  ?? defaultValue;
+const resultValue = incomingValue ?? defaultValue;
 
 console.log(resultValue);
 
