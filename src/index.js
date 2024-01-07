@@ -54,3 +54,7 @@ console.log('c:', c);
 
 console.log('PI:', PI);
 */
+
+console.log(Number('25.7px'));
+
+console.log('mango'.indexOf('nam'));
