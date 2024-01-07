@@ -150,18 +150,25 @@ console.log((1 && null && 2) > 0); // false
 
 console.log(null || (2 && 3) || 4); // 3
 
+// Example
+
+let x = 5;
+let y = 6;
+
+console.log(x && y > 0 ? 'hurray' : 'foo');
+
 // Example 9 - Значення за промовчанням та оператор нульового злиття
-// Отрефакторіть код так, щоб у змінну величину присвоювалося значення
-//  змінної ввідмінювальному, якщо воно не дорівнює undefined або null.
+// Отрефакторіть код так, щоб у змінну value присвоювалося значення
+//  змінної incomingValue, якщо воно не дорівнює undefined або null.
 // Інакше має надаватися значення defaultValue.Перевірте роботу скрипта 
 // для сліпучих значень змінної ввідміну значення: null, undefined, 0, false.
 // Використовуй оператор ?? (Nullish coalescing operator).
 
 const incomingValue = 5;
 const defaultValue = 10;
-const valueResult = incomingValue || defaultValue;
+const resultValue = incomingValue  ?? defaultValue;
 
-console.log(valueResult);
+console.log(resultValue);
 
 // Example 10 - Оператор % та методи рядків
 // Напиши скрипт, який переведе значення totalMinutes (кількість хвилин)
@@ -171,15 +178,15 @@ console.log(valueResult);
 // - 450 покажет 07:30
 // - 1441 покажет 24:01
 
-const totalMinutes = 70;
+// const totalMinutes = 70;
 
-const hours = Math.floor(totalMinutes / 60);
-const minutes = totalMinutes % 60;
+// const hours = Math.floor(totalMinutes / 60);
+// const minutes = totalMinutes % 60;
 
-console.log(hours);
-console.log(minutes);
+// console.log(hours);
+// console.log(minutes);
 
-const doubleDigitHours = String(hours).padStart(2, 0);
-const doubleDigitMinutes = String(minutes).padStart(2, 0);
+// const doubleDigitHours = String(hours).padStart(2, 0);
+// const doubleDigitMinutes = String(minutes).padStart(2, 0);
 
-console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+// console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
