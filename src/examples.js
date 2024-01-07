@@ -91,3 +91,95 @@ weight = weight.replace(',', '.');
 const bmi = Number.parseFloat(weight) / Math.pow(Number.parseFloat(height), 2); // більш сучасний метод - Number.parseFloat(height) ** 2;
 
 console.log(bmi.toFixed(1)); // 28.8
+
+// Example 7 - Оператори порівняння та приведення типів
+// Яким буде результат виразів?
+
+console.log(5 > 4); // true
+
+console.log(10 >= '7'); // true
+
+console.log('2' > '12'); // true
+
+console.log('2' < '12'); // false
+
+console.log('4' == 4); // true
+
+console.log('6' === 6); // false
+
+console.log('false' === false); // false
+
+console.log(1 == true); // true
+
+console.log(1 === true); // false
+
+console.log('0' == false); // true
+
+console.log('0' === false); // false
+
+console.log('Papaya' < 'papaya'); // true
+
+console.log('Papaya' === 'papaya'); // false
+
+console.log(undefined == null); // true
+
+console.log(undefined === null); // false
+
+console.log(null === null); // true
+
+// Example 8 - Логічні оператори
+// Яким буде результат виразів?
+
+console.log(true && 3); // 3
+
+console.log(false && 3); // false
+
+console.log(true && 4 && 'kiwi'); // 'kiwi'
+
+console.log(true && 0 && 'kiwi'); // 0
+
+console.log(true || 3); // true
+
+console.log(true || 3 || 4); // true
+
+console.log(true || false || 7); // true
+
+console.log(null || 2 || undefined); // 2
+
+console.log((1 && null && 2) > 0); // false
+
+console.log(null || (2 && 3) || 4); // 3
+
+// Example 9 - Значення за промовчанням та оператор нульового злиття
+// Отрефакторіть код так, щоб у змінну величину присвоювалося значення
+//  змінної ввідмінювальному, якщо воно не дорівнює undefined або null.
+// Інакше має надаватися значення defaultValue.Перевірте роботу скрипта 
+// для сліпучих значень змінної ввідміну значення: null, undefined, 0, false.
+// Використовуй оператор ?? (Nullish coalescing operator).
+
+const incomingValue = 5;
+const defaultValue = 10;
+const valueResult = incomingValue || defaultValue;
+
+console.log(valueResult);
+
+// Example 10 - Оператор % та методи рядків
+// Напиши скрипт, який переведе значення totalMinutes (кількість хвилин)
+//  у рядок у форматі годин і хвилин HH: MM.
+
+// - 70 покажет 01:10
+// - 450 покажет 07:30
+// - 1441 покажет 24:01
+
+const totalMinutes = 70;
+
+const hours = Math.floor(totalMinutes / 60);
+const minutes = totalMinutes % 60;
+
+console.log(hours);
+console.log(minutes);
+
+const doubleDigitHours = String(hours).padStart(2, 0);
+const doubleDigitMinutes = String(minutes).padStart(2, 0);
+
+console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
