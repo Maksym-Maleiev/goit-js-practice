@@ -166,7 +166,7 @@ console.log(x && y > 0 ? 'hurray' : 'foo');
 
 const incomingValue = 5;
 const defaultValue = 10;
-const resultValue = incomingValue ?? defaultValue;
+const resultValue = incomingValue ? incomingValue : defaultValue;
 
 console.log(resultValue);
 
@@ -178,15 +178,25 @@ console.log(resultValue);
 // - 450 покажет 07:30
 // - 1441 покажет 24:01
 
-// const totalMinutes = 70;
+const totalMinutes = 450;
 
-// const hours = Math.floor(totalMinutes / 60);
-// const minutes = totalMinutes % 60;
+const hours = Math.floor(totalMinutes / 60);
+const minutes = totalMinutes % 60;
 
-// console.log(hours);
-// console.log(minutes);
+console.log(hours);
+console.log(minutes);
 
-// const doubleDigitHours = String(hours).padStart(2, 0);
-// const doubleDigitMinutes = String(minutes).padStart(2, 0);
+console.log(hours.toString().padStart(2, 0) + ":" + minutes.toString().padStart(2, 0));
 
-// console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+// другий варіант рішення =>
+/*
+const doubleDigitHours = String(hours).padStart(2, 0);
+const doubleDigitMinutes = String(minutes).padStart(2, 0);
+
+console.log(`${doubleDigitHours}:${doubleDigitMinutes}`);
+*/
+// ========== padStart========
+
+const min = 2;
+
+console.log('min:', min.toString().padStart(2, 0)); // 02
