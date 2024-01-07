@@ -43,6 +43,7 @@ console.log('last i:', i);
 
 // =========const VS CONST========
 
+/*
 const PI = 3.14;
 
 const a = 5;
@@ -52,3 +53,4 @@ const c = a + b;
 console.log('c:', c);
 
 console.log('PI:', PI);
+*/
