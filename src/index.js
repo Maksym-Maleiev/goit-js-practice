@@ -59,4 +59,8 @@ console.log('PI:', PI);
 console.log(Number('25.7px'));
 
 console.log('mango'.indexOf('nam'));
+
+console.log('ManGO'.toLowerCase());
+
+console.log('ManGO'.toUpperCase());
 */
