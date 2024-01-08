@@ -77,10 +77,24 @@ console.log(a > 100 && b > 100 ? Math.max(a, b) : b + 512);
 // Якщо ні, додай до кінця значення link цей символ.
 // Використовуй конструкцію if...else.
 
+/*
 let link = 'https://my-site.com/about';
 
-if (link.endsWith('/') !== link) {
-  console.log(link + '/'); 
-} else {
+link.endsWith('/') ? link : link += "/";
 
-}
+// другий варіант рішення
+
+// if (link[link.length - 1] !== '/') link += '/';
+
+console.log(link);
+*/
+
+// Example 6 - Форматування посилання (includes та логічне «І»)
+
+// Напиши скрипт який перевіряє чи закінчується значення змінної link символом /.
+// Якщо ні, додай у кінець значення link цей символ, але тільки в тому випадку,
+// якщо в link є підрядок "my-site".Використовуй конструкцію if...else.
+
+let link = 'https://somesite.com/about';
+
+console.log(link);
