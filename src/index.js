@@ -69,3 +69,70 @@ const subString = str.substr(7, 3);
 
 console.log(subString); // JS🤩
 */
+
+// ==== example-1 ====
+
+/*
+const checkForSpam = (message) => {
+  const strToLowerCase = message.toLowerCase();
+  const result = strToLowerCase.includes('sale') || strToLowerCase.includes('spam');
+
+  return result;
+};
+
+console.log(checkForSpam('lorem ipsum')); // false
+console.log(checkForSpam('lorem sPam ipsum')); // true
+console.log(checkForSpam('lorem sAlE ipsum')); // true
+*/
+
+// ==== example-2 ====
+
+/*
+const checkForSpam = (message) => {
+  const words = ['spam', 'sale', 'dog', 'car'];
+  const str = message.toLowerCase();
+  let result = false;
+
+  for (let i = 0; i < words.length; i += 1){
+    const word = words[i]; // spam, sale
+
+    if (str.includes(word)) {
+      result = true;
+      break;
+    }
+  }
+
+  return result;
+};
+
+console.log(checkForSpam('lorem ipsum')); // false
+console.log(checkForSpam('lorem sPam ipsum')); // true
+console.log(checkForSpam('lorem sAlE ipsum')); // true
+console.log(checkForSpam('lorem dOg ipsum')); // true
+console.log(checkForSpam('lorem cAr ipsum')); // true
+console.log(checkForSpam('lorem cat ipsum')); // false
+*/
+
+// ==== example-3 ====
+
+const checkLogin = (userLogin) => {
+  const logins = ['admin', 'root', 'user'];
+  const str = userLogin.toLowerCase();
+  let result = false;
+
+  for (const login of logins) {
+    if (str === login) {
+      result = true;
+      break;
+    }
+  }
+
+  return result;
+};
+
+console.log(checkLogin('lorem')); // false
+console.log(checkLogin('AdmiN')); // true
+console.log(checkLogin('sAlE')); // false
+console.log(checkLogin('RoOt')); // true
+console.log(checkLogin('User')); // true
+console.log(checkLogin('cat')); // false
