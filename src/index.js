@@ -115,6 +115,7 @@ console.log(checkForSpam('lorem cat ipsum')); // false
 
 // ==== example-3 ====
 
+
 const checkLogin = (userLogin) => {
   const logins = ['admin', 'root', 'user'];
   /*
@@ -140,3 +141,11 @@ console.log(checkLogin('sale')); // false
 console.log(checkLogin('root')); // true
 console.log(checkLogin('user')); // true
 console.log(checkLogin('cat')); // false
+
+
+// що означає '=>' у функції
+/*
+function helloJS() { }; // це лінійна ф-ія
+
+const helloJS = () => { }; // теж саме, тільки це називається стрілочна ф-ія
+*/
