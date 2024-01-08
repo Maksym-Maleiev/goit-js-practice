@@ -155,3 +155,14 @@ const userName = prompt('enter name');
 
 console.log('Hello', userName ? userName : 'User');
 */
+
+
+// пустий масив у розгалудженні - буде все одно 'true'
+
+/*
+if ([0]) {
+  console.log('Hello Max');
+} else {
+  console.log('Hello user');
+}
+*/
