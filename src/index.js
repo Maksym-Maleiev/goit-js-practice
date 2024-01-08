@@ -117,6 +117,7 @@ console.log(checkForSpam('lorem cat ipsum')); // false
 
 const checkLogin = (userLogin) => {
   const logins = ['admin', 'root', 'user'];
+  /*
   let result = false;
 
   for (const login of logins) { // for of метод
@@ -127,6 +128,10 @@ const checkLogin = (userLogin) => {
   }
 
   return result;
+*/
+  
+  // інший спосіб вирішення завдання
+  return logins.includes(userLogin); // перебирає масив 'logins' і повертає нам результат
 };
 
 console.log(checkLogin('lorem')); // false
