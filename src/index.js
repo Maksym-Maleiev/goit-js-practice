@@ -149,3 +149,9 @@ function helloJS() { }; // це лінійна ф-ія
 
 const helloJS = () => { }; // теж саме, тільки це називається стрілочна ф-ія
 */
+
+/*
+const userName = prompt('enter name');
+
+console.log('Hello', userName ? userName : 'User');
+*/
