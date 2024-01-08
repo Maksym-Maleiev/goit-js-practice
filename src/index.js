@@ -117,11 +117,10 @@ console.log(checkForSpam('lorem cat ipsum')); // false
 
 const checkLogin = (userLogin) => {
   const logins = ['admin', 'root', 'user'];
-  const str = userLogin.toLowerCase();
   let result = false;
 
-  for (const login of logins) {
-    if (str === login) {
+  for (const login of logins) { // for of метод
+    if (userLogin === login) {
       result = true;
       break;
     }
@@ -131,8 +130,8 @@ const checkLogin = (userLogin) => {
 };
 
 console.log(checkLogin('lorem')); // false
-console.log(checkLogin('AdmiN')); // true
-console.log(checkLogin('sAlE')); // false
-console.log(checkLogin('RoOt')); // true
-console.log(checkLogin('User')); // true
+console.log(checkLogin('admin')); // true
+console.log(checkLogin('sale')); // false
+console.log(checkLogin('root')); // true
+console.log(checkLogin('user')); // true
 console.log(checkLogin('cat')); // false
