@@ -95,6 +95,35 @@ console.log(link);
 // Якщо ні, додай у кінець значення link цей символ, але тільки в тому випадку,
 // якщо в link є підрядок "my-site".Використовуй конструкцію if...else.
 
-let link = 'https://somesite.com/about';
+/*
+let link = 'https://my-site.com/about';
+
+if (!link.endsWith('/') && link.includes('my-site')) {
+  link += '/';
+} else {
+  link;
+}
+
+// другий варіает
+
+// if (!link.endsWith('/') && link.includes('my-site')) link += '/';
 
 console.log(link);
+*/
+
+// Example 7 - Форматування посилання (тернарний оператор)
+
+// Виконай рефакторинг коду задачі номер 6, використовуючи тернарний оператор.
+
+/*
+let link = 'https://my-site.com/about';
+// if (link.includes('my-site') && !link.endsWith('/')) {
+//   link += '/';
+// }
+
+link.includes('my-site') && !link.endsWith('/') ? link += '/' : link; 
+
+console.log(link);
+*/
+
+// Example 8 - if...else та логічні оператори
