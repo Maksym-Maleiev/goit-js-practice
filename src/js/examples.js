@@ -126,3 +126,36 @@ console.log(link);
 */
 
 // Example 8 - if...else та логічні оператори
+// Напиши скрипт який виводитиме в консоль браузера рядок залежно від значення змінної hours.
+// Якщо значення змінної hours:
+
+/*
+const hours = 25;
+let message;
+
+if (hours < 17) {
+  message = 'Pending';
+} else if (hours >= 17 && hours <= 24) {
+  message = 'Expires';
+} else {
+  message = 'Overdue';
+}
+
+console.log(`message: ${message}`);
+*/
+
+// Example 9 - Дедлайн здачі проекту (if...else)
+// Напиши скрипт для відображення часу дедлайну здачі проекту.
+// Використовуй конструкцію if...else.
+
+const daysUntilDeadline = 5;
+
+if (daysUntilDeadline === 0) {
+  console.log('Сьогодні');
+} else if (daysUntilDeadline === 1) {
+  console.log('Завтра');
+} else if (daysUntilDeadline === 2) {
+  console.log('Післязавтра');
+} else {
+  console.log('Дата у майбутньому');
+}
