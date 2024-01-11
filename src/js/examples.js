@@ -148,14 +148,54 @@ console.log(`message: ${message}`);
 // Напиши скрипт для відображення часу дедлайну здачі проекту.
 // Використовуй конструкцію if...else.
 
-const daysUntilDeadline = 5;
+/*
+const daysUntilDeadline = -1;
+let message;
 
 if (daysUntilDeadline === 0) {
-  console.log('Сьогодні');
+  message = 'Сьогодні';
 } else if (daysUntilDeadline === 1) {
-  console.log('Завтра');
+  message = 'Завтра';
 } else if (daysUntilDeadline === 2) {
-  console.log('Післязавтра');
+  message = 'Післязавтра';
+} else if (daysUntilDeadline >= 3) {
+  message = 'Дата у майбутньому';
 } else {
-  console.log('Дата у майбутньому');
+  !isNaN(daysUntilDeadline);
+  daysUntilDeadline < 0;
+  message = 'Це взагалі не число або некоректно введені дані';
 }
+
+console.log(`message: ${message}`);
+*/
+
+// Example 10 - Дедлайн здачі проекту (switch)
+// Виконай рефакторинг коду задачі номер 5 використовуючи switch.
+
+
+const daysUntilDeadline = 2;
+
+switch (daysUntilDeadline) {
+  case 0: {
+    console.log('Сьогодні');
+    break;
+  }
+
+  case 1: {
+    console.log('Завтра');
+    break;
+  }
+
+  case 2: {
+    console.log('Післязавтра');
+    break;
+  }
+
+  case 3: {
+    console.log('Дата у майбутньому');
+    }
+    
+  default:
+    console.log('Це взагалі не число або некоректно введені дані');
+}
+
