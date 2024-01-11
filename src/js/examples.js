@@ -172,7 +172,7 @@ console.log(`message: ${message}`);
 // Example 10 - Дедлайн здачі проекту (switch)
 // Виконай рефакторинг коду задачі номер 5 використовуючи switch.
 
-
+/*
 const daysUntilDeadline = 2;
 
 switch (daysUntilDeadline) {
@@ -198,4 +198,22 @@ switch (daysUntilDeadline) {
   default:
     console.log('Це взагалі не число або некоректно введені дані');
 }
+*/
 
+// Example 11 - Цикл for
+// Напиши цикл for, який виводить у консоль браузера числа за зростанням
+// від min до max, але тільки якщо число кратне 5.
+
+/*
+const max = 100;
+const min = 20;
+let message;
+
+for (let i = min; i < max; i += 1){
+  if (i % 5 === 0) {
+    console.log('number:', i);
+  }
+}
+*/
+
+// Example 12 - Введення користувача та розгалуження
