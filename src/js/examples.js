@@ -229,21 +229,23 @@ for (let i = min; i < max; i += 1){
 // - Якщо введено пароль "Я адмін", то вивести рядок "Здрастуйте!"
 // - Інакше виводити рядок "Невірний пароль"
 
-const login = prompt('Введіть логін');
-let input;
+/*
+let login = prompt('Введіть логін');
 
-if (input === 'Адмін') {
-  const password = prompt('Введіть пароль');
+if (login === 'Адмін') {
   console.log('login:', login);
-} else if (password === 'Я адмін') {
-  console.log('Вітаю!');
+  const password = prompt('Введіть пароль');
+  if (password === 'Я адмін') {
+    console.log('password:', password);
+    console.log('Вітаю!');
+  } else {
+    console.log('Невірний пароль');
+  }
 } else {
-  console.log('Невірний пароль');
-} 
-} else {
-  if (!input || input === null) {
+  if (!login || login === null) {
     console.log('Скасовано');
   } else {
     console.log('Я вас не знаю');
   }
-}
+ }
+ */
