@@ -42,7 +42,7 @@ console.log('module_04.1');
 // counter2();
 
 // * ==== Kahoot1 ====
-
+/*
 const foo = callback => {
   callback(10);
 };
@@ -52,3 +52,4 @@ const looger = value => {
 };
 
 foo(looger);
+*/
