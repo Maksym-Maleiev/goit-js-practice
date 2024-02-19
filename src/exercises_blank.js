@@ -89,6 +89,7 @@ account.deposit(600, handleSuccess, handleError);
 
 // * Example 3 - Коллбек функції
 
+/*
 // TODO Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим - функцію, яка застосовується до кожного елемента масиву.
 
 // TODO Функція each повинна повернути новий масив, елементами якого будуть результати виклику коллбека.
@@ -130,3 +131,17 @@ console.log(
     return Math.floor(value);
   })
 );
+*/
+
+// * Example 4 - Стрілочні функції
+
+// TODO Виконайте рефакторинг коду за допомогою стрілочних функцій.
+
+const createProduct = (partialProduct, callback) => callback({ id: Date.now(), ...partialProduct });
+
+const logProduct = product => console.log(product);
+
+const logTotalPrice = product => console.log(product.price * product.quantity);
+
+createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
+createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
