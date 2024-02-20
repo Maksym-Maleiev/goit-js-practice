@@ -71,3 +71,28 @@ console.log(calсulateAverage(1, 2, 3, 4)); // 2.5
 console.log(calсulateAverage(14, 8, 2)); // 8
 console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
 */
+
+// * ==== Example ====
+
+const evenNumberX2 = (...args) => {
+  let newArr = [];
+
+  args.forEach(number => {
+    if (number % 2 === 0) {
+      newArr.push(number * 2);
+    }
+  });
+
+  return newArr;
+};
+
+const evenNumberX2Reduce = (...items) =>
+  items.reduce((acc, item) => (item % 2 === 0 ? [...acc, item * 2] : acc), []);
+
+console.log(evenNumberX2(1, 2, 3, 4)); // [4, 8]
+console.log(evenNumberX2(10, 21, 3, 4)); // [20, 8]
+console.log(evenNumberX2(11, 2, 33, 44)); // [4, 88]
+
+console.log(evenNumberX2Reduce(1, 2, 3, 4)); // [4, 8]
+console.log(evenNumberX2Reduce(10, 21, 3, 4)); // [20, 8]
+console.log(evenNumberX2Reduce(11, 2, 33, 44)); // [4, 88]
