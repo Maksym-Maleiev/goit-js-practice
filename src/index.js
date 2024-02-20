@@ -53,3 +53,21 @@ const looger = value => {
 
 foo(looger);
 */
+
+// * ==== Kahoot3 ====
+/*
+const foo = () => 'Mango';
+
+console.log(foo());
+*/
+
+// * Example 9 - Метод forEach
+/*
+// TODO Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+
+const calсulateAverage = (...args) => args.reduce((acc, value) => acc + value, 0) / args.length;
+
+console.log(calсulateAverage(1, 2, 3, 4)); // 2.5
+console.log(calсulateAverage(14, 8, 2)); // 8
+console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
+*/
