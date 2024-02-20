@@ -74,6 +74,7 @@ console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
 
 // * ==== Example ====
 
+// Через forEach і if
 const evenNumberX2 = (...args) => {
   let newArr = [];
 
@@ -86,6 +87,7 @@ const evenNumberX2 = (...args) => {
   return newArr;
 };
 
+// Через reduce
 const evenNumberX2Reduce = (...items) =>
   items.reduce((acc, item) => (item % 2 === 0 ? [...acc, item * 2] : acc), []);
 
