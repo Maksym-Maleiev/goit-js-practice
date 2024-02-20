@@ -150,6 +150,7 @@ createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
 
 // * Example 5 - Стрілочні функції
 
+/*
 // TODO Виконайте рефакторинг коду за допомогою стрілочних функцій.
 
 const TRANSACTION_LIMIT = 1000;
@@ -190,3 +191,75 @@ account.deposit(1700, handleSuccess, handleError);
 account.deposit(0, handleSuccess, handleError);
 account.deposit(-600, handleSuccess, handleError);
 account.deposit(600, handleSuccess, handleError);
+*/
+
+// * Example 6 - Інлайн стрілочні функції
+/*
+// TODO Виконайте рефакторинг коду за допомогою стрілочних функцій.
+
+const each = (array, callback) => {
+  const newArr = [];
+  for (const el of array) {
+    newArr.push(callback(el));
+  }
+  return newArr;
+};
+
+console.log(each([64, 49, 36, 25, 16], value => value * 2));
+console.log(each([64, 49, 36, 25, 16], value => value - 10));
+console.log(each([64, 49, 36, 25, 16], value => Math.sqrt(value)));
+console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], value => Math.ceil(value)));
+console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], value => Math.floor(value)));
+
+// console.log(each(['Bobby', 'John', 'Peter'], value => `<li>${value}<\li>`));
+// console.log(['Bobby', 'John', 'Peter'].map(value => `<li>${value}<\li>`));
+*/
+
+// * Example 7 - Метод forEach
+/*
+// TODO Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+
+const logItems = items => {
+  console.log(items);
+  items.forEach((item, index) => {
+    console.log(`${index + 1} - ${item}`);
+  });
+};
+
+logItems(['Mango', 'Poly', 'Ajax']);
+logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+*/
+
+// * Example 8 - Метод forEach
+/*
+// TODO Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+
+const printContactsInfo = ({ names, phones }) => {
+  const nameList = names.split(',');
+  const phoneList = phones.split(',');
+
+  nameList.forEach((name, idx) => console.log(`${name} - ${phoneList[idx]}`));
+};
+
+printContactsInfo({
+  names: 'Jacob,William,Solomon,Artemis',
+  phones: '89001234567,89001112233,890055566377,890055566300',
+});
+*/
+
+// * Example 9 - Метод forEach
+/*
+// TODO Виконайте рефакторинг коду за допомогою методу forEach та стрілочні функції.
+
+const calсulateAverage = (...args) => {
+  let total = 0;
+
+  args.forEach(number => (total += number));
+
+  return total / args.length;
+};
+
+console.log(calсulateAverage(1, 2, 3, 4)); // 2.5
+console.log(calсulateAverage(14, 8, 2)); // 8
+console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
+*/
