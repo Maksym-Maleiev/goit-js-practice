@@ -72,8 +72,8 @@ console.log(calсulateAverage(14, 8, 2)); // 8
 console.log(calсulateAverage(27, 43, 2, 8, 36)); // 23.2
 */
 
-// * ==== Example ====
-
+// * ==== Example1 ====
+/*
 // Через forEach і if
 const evenNumberX2 = (...args) => {
   let newArr = [];
@@ -98,3 +98,34 @@ console.log(evenNumberX2(11, 2, 33, 44)); // [4, 88]
 console.log(evenNumberX2Reduce(1, 2, 3, 4)); // [4, 8]
 console.log(evenNumberX2Reduce(10, 21, 3, 4)); // [20, 8]
 console.log(evenNumberX2Reduce(11, 2, 33, 44)); // [4, 88]
+*/
+
+// * ==== Example2 ====
+
+const pizzaPalace = {
+  pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+  order(pizzaName, onSuccess, onError) {
+    if (this.pizzas.includes(pizzaName)) {
+      onSuccess(pizzaName);
+    } else {
+      onError(`We have not pizzas with same name ${pizzaName}`);
+    }
+  },
+};
+// Change code above this line
+
+// Callback for onSuccess
+function makePizza(pizzaName) {
+  console.log(`Your order is accepted. Cooking pizza ${pizzaName}.`);
+}
+
+// Callback for onError
+function onOrderError(error) {
+  console.log(`Error! ${error}`);
+}
+
+// Method calls with callbacks
+pizzaPalace.order('Smoked', makePizza, onOrderError);
+pizzaPalace.order('Four meats', makePizza, onOrderError);
+pizzaPalace.order('Big Mike', makePizza, onOrderError);
+pizzaPalace.order('Vienna', makePizza, onOrderError);
