@@ -189,10 +189,13 @@ const getSortedCarsOnSale = cars =>
 
 const str = 'Hello to this JS tutorial';
 
-const reverseWords = text =>
+const reverseWords1 = text =>
   text
     .split(' ')
     .map(word => word.split('').reverse().join(''))
     .join(' ');
 
-console.log(reverseWords(str));
+// const reverseWords2 = text => text.split('').reverse().join('').split(' ').reverse().join(' ');
+
+console.log(reverseWords1(str));
+// console.log(reverseWords2(str));
