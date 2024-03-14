@@ -181,10 +181,18 @@ const getModelsOnSale = cars =>
 const getSortedCarsOnSale = cars =>
   cars.filter(car => car.onSale).sort((prev, next) => prev.price - next.price);
 
-console.table(getSortedCarsOnSale(cars));
+// console.table(getSortedCarsOnSale(cars));
 
 /*
  * Example
  */
 
 const str = 'Hello to this JS tutorial';
+
+const reverseWords = text =>
+  text
+    .split(' ')
+    .map(word => word.split('').reverse().join(''))
+    .join(' ');
+
+console.log(reverseWords(str));
