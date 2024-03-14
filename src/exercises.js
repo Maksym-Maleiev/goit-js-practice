@@ -182,3 +182,9 @@ const getSortedCarsOnSale = cars =>
   cars.filter(car => car.onSale).sort((prev, next) => prev.price - next.price);
 
 console.table(getSortedCarsOnSale(cars));
+
+/*
+ * Example
+ */
+
+const str = 'Hello to this JS tutorial';
